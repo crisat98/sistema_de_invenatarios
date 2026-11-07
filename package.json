@@ -1,6 +1,9 @@
 {
+  "name": "stockia-inventory-prototype",
+  "private": true,
   "scripts": {
-    "start": "servor --reload"
+    "start": "servor --reload",
+    "build": "node build.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",

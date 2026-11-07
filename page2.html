@@ -1,19 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
   <head>
-    <title>Other page</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Prueba de usabilidad del prototipo Stockia." />
+    <title>Prueba de usabilidad | Stockia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="usability.css" />
+    <script type="module" src="usability.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/page2.html" aria-current="page">Other page</a>
-    </nav>
-    <main>
-      <h1>My other page</h1>
+    <header class="test-header"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>stockia</span></a><span class="header-label">PRUEBA DE USABILIDAD</span><a class="back-link" href="index.html">Volver al prototipo <span>↗</span></a></header>
+    <main class="test-layout">
+      <section class="intro"><p class="eyebrow">EVALUACIÓN DEL PROTOTIPO FUNCIONAL</p><h1>Ayúdanos a mejorar Stockia</h1><p>Esta prueba busca conocer qué tan fácil resulta gestionar el inventario. Realiza las tareas en el prototipo y luego registra aquí tu experiencia.</p><div class="intro-meta"><span><strong>5</strong> tareas</span><span><strong>3</strong> minutos</span><span><strong>1–5</strong> valoración</span></div><div class="tip"><span>i</span><div><strong>No hay respuestas correctas o incorrectas</strong><p>Evaluamos la experiencia de la herramienta, no tus conocimientos.</p></div></div></section>
+      <section class="form-card"><div class="progress-top"><span id="form-step">PASO 1 DE 3</span><span id="progress-label">Datos del participante</span></div><div class="progress-bar"><span id="progress-fill"></span></div>
+        <form id="usability-form">
+          <div class="form-step active" data-step="1"><h2>¿Quién participa?</h2><p class="step-description">Estos datos nos ayudan a interpretar mejor los resultados.</p><label>Nombre o código del participante<input id="participant-name" type="text" required maxlength="80" placeholder="Ej. Participante 01" /></label><label>Relación con la microempresa<select id="participant-role" required><option value="">Selecciona una opción</option><option>Propietario o administrador</option><option>Responsable de inventario</option><option>Empleado</option><option>Estudiante / observador</option></select></label><button class="primary-button next-button" type="button" data-next="2">Comenzar evaluación <span>→</span></button></div>
+          <div class="form-step" data-step="2"><h2>Evalúa las tareas</h2><p class="step-description">Marca si pudiste completar cada tarea sin ayuda.</p><div class="task-list"><fieldset><legend><span>01</span> Consultar cuáles productos tienen stock bajo</legend><div class="choice-row"><label><input type="radio" name="task-1" value="completada" required /><span>Completada</span></label><label><input type="radio" name="task-1" value="con-ayuda" /><span>Con ayuda</span></label><label><input type="radio" name="task-1" value="no-completada" /><span>No completada</span></label></div></fieldset><fieldset><legend><span>02</span> Registrar una entrada de mercancía</legend><div class="choice-row"><label><input type="radio" name="task-2" value="completada" required /><span>Completada</span></label><label><input type="radio" name="task-2" value="con-ayuda" /><span>Con ayuda</span></label><label><input type="radio" name="task-2" value="no-completada" /><span>No completada</span></label></div></fieldset><fieldset><legend><span>03</span> Consultar el historial de movimientos</legend><div class="choice-row"><label><input type="radio" name="task-3" value="completada" required /><span>Completada</span></label><label><input type="radio" name="task-3" value="con-ayuda" /><span>Con ayuda</span></label><label><input type="radio" name="task-3" value="no-completada" /><span>No completada</span></label></div></fieldset><fieldset><legend><span>04</span> Crear un nuevo producto</legend><div class="choice-row"><label><input type="radio" name="task-4" value="completada" required /><span>Completada</span></label><label><input type="radio" name="task-4" value="con-ayuda" /><span>Con ayuda</span></label><label><input type="radio" name="task-4" value="no-completada" /><span>No completada</span></label></div></fieldset><fieldset><legend><span>05</span> Intentar registrar una salida mayor al stock disponible</legend><div class="choice-row"><label><input type="radio" name="task-5" value="completada" required /><span>Completada</span></label><label><input type="radio" name="task-5" value="con-ayuda" /><span>Con ayuda</span></label><label><input type="radio" name="task-5" value="no-completada" /><span>No completada</span></label></div></fieldset></div><div class="step-actions"><button class="secondary-button" type="button" data-next="1">Atrás</button><button class="primary-button" type="button" data-next="3">Continuar <span>→</span></button></div></div>
+          <div class="form-step" data-step="3"><h2>Cuéntanos tu experiencia</h2><p class="step-description">Tu opinión nos ayuda a priorizar mejoras.</p><fieldset class="rating-field"><legend>En general, ¿qué tan fácil fue usar el prototipo?</legend><div class="rating-row"><label><input type="radio" name="satisfaction" value="1" required /><span>1</span><small>Muy difícil</small></label><label><input type="radio" name="satisfaction" value="2" /><span>2</span></label><label><input type="radio" name="satisfaction" value="3" /><span>3</span></label><label><input type="radio" name="satisfaction" value="4" /><span>4</span></label><label><input type="radio" name="satisfaction" value="5" /><span>5</span><small>Muy fácil</small></label></div></fieldset><label>¿Qué fue lo más fácil de usar?<textarea id="comments" maxlength="500" placeholder="Escribe tus comentarios o sugerencias..."></textarea></label><p class="form-error" id="form-error"></p><div class="step-actions"><button class="secondary-button" type="button" data-next="2">Atrás</button><button class="primary-button" type="submit">Guardar evaluación <span>✓</span></button></div></div>
+        </form>
+        <div class="success-state hidden" id="success-state"><div class="success-icon">✓</div><h2>Evaluación registrada</h2><p>Gracias por participar. Tu respuesta fue guardada y será tenida en cuenta para el refinamiento del prototipo.</p><div class="success-actions"><a class="secondary-button" href="index.html">Volver al inventario</a><button class="primary-button" id="new-test" type="button">Registrar otra respuesta</button></div></div>
+      </section>
     </main>
+    <footer>Stockia · Prototipo funcional de gestión de inventarios</footer>
   </body>
 </html>
